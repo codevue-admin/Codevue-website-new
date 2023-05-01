@@ -5,12 +5,15 @@ import TestimonialPage from "./Testimonialpage.js";
 import ManifestoPage from "./Manifestopage";
 import ContactPage from "./ContactPage";
 import CaseStudyPage from "./caseStudyPage";
+import ServicePage from "./ServicePage";
 import { useEffect, useRef, useState, useMemo } from "react";
 
 let scrollIntoView = require("scroll-into-view");
 
 function Allpages() {
   const [child, setChild] = useState("1");
+  const [service, setservice] = useState(70);
+  const [servicetab, settab] = useState("service");
   const ref = useRef(null);
   const aboutRef = useRef(null);
   const teamRef = useRef(null);
@@ -18,6 +21,7 @@ function Allpages() {
   const manifestoRef = useRef(null);
   const contactRef = useRef(null);
   const caseStudyRef = useRef(null);
+  const serviceRef = useRef(null);
   const allref = {
     1: aboutRef,
     2: teamRef,
@@ -25,6 +29,7 @@ function Allpages() {
     4: manifestoRef,
     5: contactRef,
     6: caseStudyRef,
+    7: serviceRef,
   };
   let pos = 0;
 
@@ -41,6 +46,21 @@ function Allpages() {
     console.log("clicked!");
     let r = e.target.getAttribute("data-val");
     console.log(r);
+    if (r == 7) {
+      let s = e.target.getAttribute("data-srv");
+      if (s != null) {
+        setservice(s);
+      }
+      if (s == "70") {
+        settab("service");
+      } else if (s == "71") {
+        settab("imagine");
+      } else if (s == "72") {
+        settab("design");
+      } else {
+        settab("develop");
+      }
+    }
     console.log(allref[r].current);
     scrollIntoView(allref[r].current, function () {
       pos = window.scrollY;
@@ -89,7 +109,12 @@ function Allpages() {
   return (
     <div ref={ref}>
       <Navbar />
-      <Aside child={child} myref={teamRef} handleclick={handleClick} />
+      <Aside
+        child={child}
+        myref={teamRef}
+        srv={service}
+        handleclick={handleClick}
+      />
       <Nextpage child={child} />
       <AboutPage childref={aboutRef} />
       <TeamPage childref={teamRef} />
@@ -97,6 +122,7 @@ function Allpages() {
       <ManifestoPage childref={manifestoRef} />
       <ContactPage childref={contactRef} />
       <CaseStudyPage childref={caseStudyRef} />
+      <ServicePage childref={serviceRef} servicetab={servicetab} />
     </div>
   );
 }

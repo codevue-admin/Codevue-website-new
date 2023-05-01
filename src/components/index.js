@@ -12,6 +12,7 @@ import ContactForm from "./ContactForm";
 import Question from "./questions";
 import SelectTeam from "./SelectTeam";
 import CaseStudy from "./Casestudy";
+import Service from "./Service";
 export {
   Home,
   About,
@@ -29,4 +30,5 @@ export {
   Question,
   SelectTeam,
   CaseStudy,
+  Service,
 };

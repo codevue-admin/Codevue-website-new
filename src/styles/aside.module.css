@@ -8,6 +8,8 @@
     left: 5%;
     z-index: 100;
     animation: anim 2s ease-in-out;
+    display: flex;
+    gap: 5px;
 }
 
 @keyframes anim {
@@ -25,6 +27,14 @@
     flex-direction: column;
     justify-content: space-around;
     height: 60%;
+}
+.ul7{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 60%;
+    justify-content: center;
 }
 .item1{
     font-size: 1.2rem;
