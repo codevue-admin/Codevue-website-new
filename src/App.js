@@ -1,4 +1,11 @@
-import { HomePage, AboutPage, TeamPage, Allpages } from "./pages";
+import {
+  HomePage,
+  AboutPage,
+  TeamPage,
+  Allpages,
+  PolicyPage,
+  TermsAndConditionsPage,
+} from "./pages";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useTheme } from "./hooks/theme";
@@ -16,8 +23,8 @@ function App() {
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/team" element={<TeamPage />} />
+          <Route path="/policy" element={<PolicyPage />} />
+          <Route path="/terms" element={<TermsAndConditionsPage />} />
           <Route path="/allpages" element={<Allpages />} />
         </Routes>
       </AnimatePresence>

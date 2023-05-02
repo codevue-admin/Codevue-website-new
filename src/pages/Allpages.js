@@ -24,12 +24,12 @@ function Allpages() {
   const serviceRef = useRef(null);
   const allref = {
     1: aboutRef,
-    2: teamRef,
-    3: testimonialRef,
-    4: manifestoRef,
-    5: contactRef,
-    6: caseStudyRef,
-    7: serviceRef,
+    2: manifestoRef,
+    3: serviceRef,
+    4: caseStudyRef,
+    5: testimonialRef,
+    6: teamRef,
+    7: contactRef,
   };
   let pos = 0;
 
@@ -46,7 +46,7 @@ function Allpages() {
     console.log("clicked!");
     let r = e.target.getAttribute("data-val");
     console.log(r);
-    if (r == 7) {
+    if (r == 3) {
       let s = e.target.getAttribute("data-srv");
       if (s != null) {
         setservice(s);
@@ -117,12 +117,12 @@ function Allpages() {
       />
       <Nextpage child={child} />
       <AboutPage childref={aboutRef} />
-      <TeamPage childref={teamRef} />
-      <TestimonialPage childref={testimonialRef} />
       <ManifestoPage childref={manifestoRef} />
-      <ContactPage childref={contactRef} />
-      <CaseStudyPage childref={caseStudyRef} />
       <ServicePage childref={serviceRef} servicetab={servicetab} />
+      <CaseStudyPage childref={caseStudyRef} />
+      <TestimonialPage childref={testimonialRef} />
+      <TeamPage childref={teamRef} />
+      <ContactPage childref={contactRef} />
     </div>
   );
 }

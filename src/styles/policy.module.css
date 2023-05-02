@@ -1,0 +1,42 @@
+@import "color.css";
+
+
+.policy{
+    width: 100%;
+}
+
+.section1  {
+   font-size: .8rem;
+   top: 5vh;
+   position: fixed;
+   height: 90vh;
+   width: 25%;
+   padding-left: 10px;
+}
+
+.section1 ul{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    height: 100%;
+    width: 100%;
+}
+
+.section1 ul li{
+    cursor: pointer;
+}
+
+.section2{
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 26%;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section2 ul{
+    list-style-position: inside;
+}

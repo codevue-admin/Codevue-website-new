@@ -13,6 +13,8 @@ import Question from "./questions";
 import SelectTeam from "./SelectTeam";
 import CaseStudy from "./Casestudy";
 import Service from "./Service";
+import Policy from "./PrivacyPolicy";
+import TermsAndConditions from "./TermsAndConditions";
 export {
   Home,
   About,
@@ -31,4 +33,6 @@ export {
   SelectTeam,
   CaseStudy,
   Service,
+  Policy,
+  TermsAndConditions,
 };

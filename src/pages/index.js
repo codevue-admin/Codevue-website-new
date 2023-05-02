@@ -7,6 +7,8 @@ import ManifestoPage from "./Manifestopage";
 import ContactPage from "./ContactPage";
 import CaseStudyPage from "./caseStudyPage";
 import ServicePage from "./ServicePage";
+import PolicyPage from "./PolicyPage";
+import TermsAndConditionsPage from "./TermAndConditionPage";
 export {
   HomePage,
   AboutPage,
@@ -17,4 +19,6 @@ export {
   ContactPage,
   CaseStudyPage,
   ServicePage,
+  PolicyPage,
+  TermsAndConditionsPage,
 };
