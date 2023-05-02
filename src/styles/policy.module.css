@@ -40,3 +40,13 @@
 .section2 ul{
     list-style-position: inside;
 }
+
+@media screen and (max-width:600px) {
+    .section1{
+        display: none;
+    }
+    .section2{
+        width: 98%;
+        padding-left: 1%;
+    }
+}
