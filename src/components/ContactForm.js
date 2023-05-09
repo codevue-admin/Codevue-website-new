@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/contactform.module.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { useTheme } from "../hooks/theme";
 
 function ContactForm() {
+  let theme = useTheme();
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [phone, setphone] = useState("");
@@ -36,18 +38,21 @@ function ContactForm() {
           <h3>Fill the form </h3>
           <form className={styles.myform}>
             <input
+              style={{ color: theme.mode.color }}
               placeholder="name"
               name="name"
               value={name}
               onChange={(e) => setname(e.target.value)}
             />
             <input
+              style={{ color: theme.mode.color }}
               placeholder="email"
               name="email"
               value={email}
               onChange={(e) => setemail(e.target.value)}
             />
             <input
+              style={{ color: theme.mode.color }}
               type="number"
               placeholder="phone number"
               name="phone"
@@ -55,12 +60,14 @@ function ContactForm() {
               onChange={(e) => setphone(e.target.value)}
             />
             <input
+              style={{ color: theme.mode.color }}
               placeholder="message"
               name="message"
               value={message}
               onChange={(e) => setmessage(e.target.value)}
             />
             <button
+              style={{ color: theme.mode.color }}
               className={styles.btn}
               type="submit"
               onClick={handleSubmit}

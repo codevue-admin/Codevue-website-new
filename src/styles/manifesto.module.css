@@ -30,8 +30,12 @@
 }
 
 .tabclick{
-    border-bottom: 2px solid var(--manifestoColor);
-    color: var(--manifestoColor);
+    border-bottom: 2px solid var(--manifestoColorDark);
+    color: var(--manifestoColorDark);
+}
+.tabclickl{
+    border-bottom: 2px solid var(--manifestoColorLight);
+    color: var(--manifestoColorLight);
 }
 
 .section{

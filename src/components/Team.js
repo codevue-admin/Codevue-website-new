@@ -34,7 +34,9 @@ function Team(props) {
   };
   return (
     <div className={styles.main}>
-      <h1 className={styles.h1}>our teams</h1>
+      <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+        our teams
+      </h1>
       <div>
         <i>𝒞𝑜𝒹𝑒𝒱𝓊𝑒 𝒾𝓈 𝒻𝓇𝒾𝓋𝑜𝓁𝒾𝓉𝓎 𝓌𝒾𝓉𝒽𝑜𝓊𝓉 𝑜𝓊𝓇 𝓉𝑒𝒶𝓂 𝑜𝒻 𝒷𝓇𝒶𝒾𝓃𝒾𝒶𝒸𝓈.</i>
       </div>

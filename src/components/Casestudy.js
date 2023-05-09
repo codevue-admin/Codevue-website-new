@@ -76,7 +76,11 @@ function CaseStudy() {
         <div className={styles.textdiv}>
           {Object.keys(mycase).map((key, idx) => {
             if (key == "h1") {
-              return <h2 key={`${key}-${idx}`}>{mycase[key]}</h2>;
+              return (
+                <h2 style={{ color: theme.mode.h1 }} key={`${key}-${idx}`}>
+                  {mycase[key]}
+                </h2>
+              );
             }
             if (key == "p") {
               return (
@@ -106,7 +110,9 @@ function CaseStudy() {
           X
         </div>
       </div>
-      <h1 className={styles.h1}>Case Study</h1>
+      <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+        Case Study
+      </h1>
       <div className={styles.tagline}>
         <i>𝒲𝑒 𝓀𝓃𝑜𝓌 𝒮𝑜𝒻𝓉𝓌𝒶𝓇𝑒 𝒶𝓃𝒹 𝒶𝓅𝓅𝓈; 𝓀𝓃𝑜𝓌 𝓌𝒽𝓎, 𝒷𝑒𝒸𝒶𝓊𝓈𝑒 𝓌𝑒 𝓌𝓇𝒾𝓉𝑒 𝓉𝒽𝑒𝓂.</i>
       </div>

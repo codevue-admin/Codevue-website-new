@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../styles/questions.module.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import SelectTeam from "./SelectTeam";
+import { useTheme } from "../hooks/theme";
 
 const questions = [
   "Q. I don't think we've been formally introduced. Hi, I'm Shashank, what's your name?",
@@ -10,6 +11,7 @@ const questions = [
 ];
 
 function Question() {
+  let theme = useTheme();
   let [name, setname] = useState("");
   let [phone, setphone] = useState("");
   let [email, setemail] = useState("");
@@ -86,6 +88,7 @@ function Question() {
                   Phone Number
                 </h4>
                 <input
+                  style={{ color: theme.mode.color }}
                   type="number"
                   className={styles.phoneinp}
                   ref={phRef}
@@ -100,6 +103,7 @@ function Question() {
                   Email ID
                 </h4>
                 <input
+                  style={{ color: theme.mode.color }}
                   className={styles.emailinp}
                   ref={emRef}
                   placeholder="Email ID"
@@ -113,6 +117,7 @@ function Question() {
                   Skype ID
                 </h4>
                 <input
+                  style={{ color: theme.mode.color }}
                   className={styles.skypeinp}
                   ref={skRef}
                   placeholder="Skype ID"
@@ -131,6 +136,7 @@ function Question() {
         )}
         {count == 0 && (
           <input
+            style={{ color: theme.mode.color }}
             className={styles.quesinp}
             ref={inpRef}
             placeholder={questions[count]}
@@ -140,7 +146,12 @@ function Question() {
           />
         )}
 
-        <button className={styles.btn} disabled={btn} onClick={handleNext}>
+        <button
+          style={{ color: theme.mode.color }}
+          className={styles.btn}
+          disabled={btn}
+          onClick={handleNext}
+        >
           Next <FaRegArrowAltCircleRight />
         </button>
       </div>

@@ -4,10 +4,13 @@ import { useTheme } from "../hooks/theme";
 import { FaQuoteLeft } from "react-icons/fa";
 import Aside from "./Aside";
 function About(props) {
+  let theme = useTheme();
   return (
     <div className={styles.aboutsection}>
       <div className={styles.mainabout}>
-        <h1 className={styles.h1}>about</h1>
+        <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+          About
+        </h1>
         <div className={styles.tagline}>
           <i>𝒲𝑒 𝓀𝓃𝑜𝓌 𝒮𝑜𝒻𝓉𝓌𝒶𝓇𝑒 𝒶𝓃𝒹 𝒶𝓅𝓅𝓈; 𝓀𝓃𝑜𝓌 𝓌𝒽𝓎, 𝒷𝑒𝒸𝒶𝓊𝓈𝑒 𝓌𝑒 𝓌𝓇𝒾𝓉𝑒 𝓉𝒽𝑒𝓂.</i>
         </div>

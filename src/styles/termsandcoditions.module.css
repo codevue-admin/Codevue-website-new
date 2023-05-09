@@ -1,1 +1,41 @@
 @import "color.css";
+
+.termcontainer{
+    width: 100%;
+}
+
+.termnav{
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    padding-left: 2px;
+}
+
+.termnav ul{
+    height: 100%;
+    width: 100%;
+    padding-top: 25%;
+}
+.termnav li{
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.termdiv{
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 20%;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .termnav{
+        display: none;
+    }
+    .termdiv{
+        padding-left: 0;
+    }
+}

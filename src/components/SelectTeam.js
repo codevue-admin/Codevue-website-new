@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/selectteam.module.css";
 import { useEffect, useRef, useState } from "react";
-import { useMode } from "../hooks/theme";
+import { useTheme } from "../hooks/theme";
 
 function SelectTeam(props) {
-  const theme = useMode();
+  const theme = useTheme();
   const [mobileteam, setmobileteam] = useState("Mobile Apps");
   const [webteam, setweb] = useState("Website");
   const [attach, setAttach] = useState("Add attachment");
@@ -35,8 +35,13 @@ function SelectTeam(props) {
     webRef.current.classList.remove(styles.dis);
     let li = e.target.closest("li");
     let sp = li.childNodes[0];
-    sp.style.borderBottom = `2px solid lightgrey`;
-    sp.style.color = "lightgrey";
+    if (theme.mode.color === "white") {
+      sp.style.borderBottom = `2px solid lightgrey`;
+      sp.style.color = "lightgrey";
+    } else {
+      sp.style.borderBottom = `2px solid grey`;
+      sp.style.color = "grey";
+    }
   };
 
   const mobteamClick = (e) => {
@@ -46,8 +51,13 @@ function SelectTeam(props) {
     mobileRef.current.classList.remove(styles.dis);
     let li = e.target.closest("li");
     let sp = li.childNodes[0];
-    sp.style.borderBottom = `2px solid lightgrey`;
-    sp.style.color = "lightgrey";
+    if (theme.mode.color === "white") {
+      sp.style.borderBottom = `2px solid lightgrey`;
+      sp.style.color = "lightgrey";
+    } else {
+      sp.style.borderBottom = `2px solid grey`;
+      sp.style.color = "grey";
+    }
   };
   const handleAttach = (e) => {
     if (e.target.files[0]) {
@@ -77,7 +87,7 @@ function SelectTeam(props) {
       if (mobileteam != "Mobile Apps") {
         setmobileteam("Mobile Apps");
         e.target.style.borderBottom = "none";
-        e.target.style.color = "white";
+        e.target.style.color = theme.mode.color;
         setcount(count - 1);
       }
     } else if (num == "2") {
@@ -90,15 +100,20 @@ function SelectTeam(props) {
       if (webteam != "Website") {
         setweb("Website");
         e.target.style.borderBottom = "none";
-        e.target.style.color = "white";
+        e.target.style.color = theme.mode.color;
         setcount(count - 1);
       }
     } else if (num == "3") {
       if (wearable == "") {
         let li = e.target.closest("li");
         let sp = li.childNodes[0];
-        sp.style.borderBottom = `2px solid lightgrey`;
-        sp.style.color = "lightgrey";
+        if (theme.mode.color === "white") {
+          sp.style.borderBottom = `2px solid lightgrey`;
+          sp.style.color = "lightgrey";
+        } else {
+          sp.style.borderBottom = `2px solid grey`;
+          sp.style.color = "grey";
+        }
         setwearable("wearable");
         setcount(count + 1);
       } else {
@@ -107,14 +122,19 @@ function SelectTeam(props) {
         let li = e.target.closest("li");
         let sp = li.childNodes[0];
         sp.style.borderBottom = "none";
-        sp.style.color = "white";
+        sp.style.color = theme.mode.color;
       }
     } else if (num == "4") {
       if (blockchain == "") {
         let li = e.target.closest("li");
         let sp = li.childNodes[0];
-        sp.style.borderBottom = `2px solid lightgrey`;
-        sp.style.color = "lightgrey";
+        if (theme.mode.color === "white") {
+          sp.style.borderBottom = `2px solid lightgrey`;
+          sp.style.color = "lightgrey";
+        } else {
+          sp.style.borderBottom = `2px solid grey`;
+          sp.style.color = "grey";
+        }
         setblockchain("blockchain");
         setcount(count + 1);
       } else {
@@ -123,16 +143,24 @@ function SelectTeam(props) {
         let li = e.target.closest("li");
         let sp = li.childNodes[0];
         sp.style.borderBottom = `none`;
-        sp.style.color = "white";
+        sp.style.color = theme.mode.color;
       }
     } else if (num == "5") {
       servRef.current.style.display = "none";
       serviceInpRef.current.style.display = "block";
     } else if (num == "6") {
-      e.target.style.color = "lightgrey";
+      if (theme.mode.color === "white") {
+        e.target.style.color = "lightgrey";
+      } else {
+        e.target.style.color = "grey";
+      }
       attachRef.current.click();
     } else if (num == "7") {
-      e.target.style.color = "lightgrey";
+      if (theme.mode.color === "white") {
+        e.target.style.color = "lightgrey";
+      } else {
+        e.target.style.color = "grey";
+      }
       ndaRef.current.click();
     }
   };
@@ -142,7 +170,11 @@ function SelectTeam(props) {
         <span data-val="1" className={styles.span} onClick={handleClick}>
           {mobileteam}
         </span>
-        <div ref={mobileRef} className={styles.mobteam}>
+        <div
+          style={{ backgroundColor: theme.mode.backgroundColor }}
+          ref={mobileRef}
+          className={styles.mobteam}
+        >
           <div>
             <Link data-val="native" onClick={mobteamClick}>
               Native
@@ -169,7 +201,11 @@ function SelectTeam(props) {
         <span data-val="2" className={styles.span} onClick={handleClick}>
           {webteam}
         </span>
-        <div ref={webRef} className={styles.webteam}>
+        <div
+          style={{ backgroundColor: theme.mode.backgroundColor }}
+          ref={webRef}
+          className={styles.webteam}
+        >
           <div>
             <Link data-val="informative" onClick={webClick}>
               Informative

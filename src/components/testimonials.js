@@ -1,12 +1,14 @@
 import styles from "../styles/testimonials.module.css";
 import img from "../images/company.jpg";
 import { FaQuoteLeft } from "react-icons/fa";
+import { useTheme } from "../hooks/theme";
 
 function Testimonials(props) {
+  let theme = useTheme();
   return (
     <div className={styles.main}>
       <div className={styles.content}>
-        <h1>testimonials</h1>
+        <h1 style={{ color: theme.mode.h1 }}>testimonials</h1>
         <div className={styles.tagline}>
           <i>
             𝒲𝒽𝒾𝓁𝑒 𝑜𝓊𝓇 𝓉𝑒𝒶𝓂 𝒾𝓈 𝓉𝒽𝑒 𝒷𝓇𝒶𝒾𝓃𝓈, 𝑜𝓊𝓇 𝓅𝓇𝑜𝓁𝒾𝒻𝒾𝒸 𝒸𝓁𝒾𝑒𝓃𝓉𝑒𝓁𝑒 𝒾𝓈 𝓉𝒽𝑒 𝒽𝑒𝒶𝓇𝓉𝓈

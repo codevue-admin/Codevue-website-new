@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 import styles from "../styles/service.module.css";
 import { Link } from "react-router-dom";
+import { useTheme } from "../hooks/theme";
 
 function Service(props) {
+  let theme = useTheme();
   let links = useRef(null);
   const handleTabClick = (e) => {
     let team = e.target.closest(`.${styles.tabs}`);
@@ -20,7 +22,9 @@ function Service(props) {
     <div className={styles.service}>
       {props.tab == "service" && (
         <div className={styles.section1}>
-          <h1 className={styles.h1}>Service</h1>
+          <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+            Service
+          </h1>
           <div>
             <i>𝐼𝓂𝒶𝑔𝒾𝓃𝑒. 𝒟𝑒𝓈𝒾𝑔𝓃. 𝐵𝓊𝒾𝓁𝒹. 𝐿𝒶𝓊𝓃𝒸𝒽.</i>
           </div>
@@ -39,7 +43,9 @@ function Service(props) {
       )}
       {props.tab == "imagine" && (
         <div className={styles.section2}>
-          <h1 className={styles.h1}>Imagine</h1>
+          <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+            Imagine
+          </h1>
           <div>
             <i>𝒯𝒽𝑒 𝒻𝓁𝒾𝑔𝒽𝓉 𝑜𝒻 𝓉𝓇𝒶𝓃𝓈𝒻𝑜𝓇𝓂𝒶𝓉𝒾𝑜𝓃 𝒶𝓃𝒹 𝓈𝓊𝒸𝒸𝑒𝓈𝓈 𝓉𝒶𝓀𝑒 𝑜𝒻𝒻.!</i>
           </div>
@@ -71,7 +77,9 @@ function Service(props) {
       )}
       {props.tab == "design" && (
         <div className={styles.section3}>
-          <h1 className={styles.h1}>Design</h1>
+          <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+            Design
+          </h1>
           <div>
             <i>𝒢𝑒𝓉 𝓇𝑒𝒶𝒹𝓎 𝓉𝑜 𝑒𝓍𝓅𝑒𝓇𝒾𝑒𝓃𝒸𝑒 𝑒𝓍𝒸𝑒𝓁𝓁𝑒𝓃𝒸𝑒.!</i>
           </div>
@@ -106,7 +114,9 @@ function Service(props) {
       )}
       {props.tab == "develop" && (
         <div className={styles.section4}>
-          <h1 className={styles.h1}>Develop</h1>
+          <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+            Develop
+          </h1>
           <div>
             <i>𝒯𝒽𝒾𝓈 𝒾𝓈 𝓌𝑒𝓇𝑒 𝓉𝒽𝑒 𝓂𝒶𝑔𝒾𝒸 𝒶𝓃𝒹 𝒻𝓊𝓃 𝒽𝒶𝓅𝓅𝑒𝓃𝓈.!</i>
           </div>

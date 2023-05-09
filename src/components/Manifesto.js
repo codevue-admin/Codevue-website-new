@@ -2,8 +2,10 @@ import { useRef, useState } from "react";
 import styles from "../styles/manifesto.module.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Trust, Quality, Communication } from "./ManifestoTabs";
+import { useTheme } from "../hooks/theme";
 
 function Manifesto() {
+  let theme = useTheme();
   const [tab, settab] = useState("Trust");
   let trustRef = useRef(null);
   let qualityRef = useRef(null);
@@ -14,24 +16,36 @@ function Manifesto() {
     let l3 = commRef.current;
     if (l1.classList.length > 0) {
       l1.classList.remove(l1.classList[0]);
-      e.target.classList.add(`${styles.tabclick}`);
+      if (theme.mode.color === "white") {
+        e.target.classList.add(`${styles.tabclick}`);
+      } else {
+        e.target.classList.add(`${styles.tabclickl}`);
+      }
       let t = e.target.getAttribute("data-val");
       settab(t);
     } else if (l2.classList.length > 0) {
       l2.classList.remove(l2.classList[0]);
-      e.target.classList.add(`${styles.tabclick}`);
+      if (theme.mode.color === "white") {
+        e.target.classList.add(`${styles.tabclick}`);
+      } else {
+        e.target.classList.add(`${styles.tabclickl}`);
+      }
       let t = e.target.getAttribute("data-val");
       settab(t);
     } else {
       l3.classList.remove(l3.classList[0]);
-      e.target.classList.add(`${styles.tabclick}`);
+      if (theme.mode.color === "white") {
+        e.target.classList.add(`${styles.tabclick}`);
+      } else {
+        e.target.classList.add(`${styles.tabclickl}`);
+      }
       let t = e.target.getAttribute("data-val");
       settab(t);
     }
   };
   return (
     <div className={styles.maindiv}>
-      <h1>manifesto</h1>
+      <h1 style={{ color: theme.mode.h1 }}>manifesto</h1>
       <div className={styles.tagline}>
         <i>
           𝑀𝑜𝓇𝒶𝓁 𝓋𝒶𝓁𝓊𝑒𝓈 𝒻𝓇𝑜𝓂 𝑜𝓊𝓇 𝒸𝒽𝒾𝓁𝒹𝒽𝑜𝑜𝒹 𝓇𝑒𝒸𝑜𝓃𝒸𝑒𝓅𝓉𝓊𝒶𝓁𝒾𝓏𝑒𝒹 𝒶𝓈 𝓉𝒽𝑒 𝓂𝒶𝓃𝒾𝒻𝑒𝓈𝓉𝑜 𝑜𝒻
@@ -42,7 +56,9 @@ function Manifesto() {
         <div className={styles.tabs}>
           <div
             data-val="Trust"
-            className={styles.tabclick}
+            className={
+              theme.mode.color === "white" ? styles.tabclick : styles.tabclickl
+            }
             ref={trustRef}
             onClick={handleClick}
           >

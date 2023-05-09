@@ -1,10 +1,14 @@
 import styles from "../styles/contact.module.css";
 import { Link } from "react-router-dom";
+import { useTheme } from "../hooks/theme";
 
 function Contact(props) {
+  let theme = useTheme();
   return (
     <div className={styles.contact}>
-      <h1 className={styles.heading}>contact</h1>
+      <h1 style={{ color: theme.mode.h1 }} className={styles.heading}>
+        contact
+      </h1>
       <p>𝐿𝑒𝓉'𝓈 𝓇𝒶𝒾𝓈𝑒 𝒶 𝓋𝒾𝓇𝓉𝓊𝒶𝓁 𝓉𝑜𝒶𝓈𝓉 𝓉𝑜 𝓎𝑜𝓊𝓇 𝒹𝒾𝑔𝒾𝓉𝒶𝓁 𝓈𝓊𝒸𝒸𝑒𝓈𝓈.!</p>
       <p>
         We've had the privilege of helping many of our clients navigate the vast

@@ -7,8 +7,10 @@
     --lightPrimatyColor:#1D1D1D;
     --secondaryColor:#FF9A3E;
     --headingColor:#CBD0D6;
+    --headingColor:#5a5a5a;
     --teamColor:#30BEC7;
-    --manifestoColor:#F0FF44;
+    --manifestoColorDark:#F0FF44;
+    --manifestoColorLight:#c0b005;
     --onHoverShadow: #050505;
     --submitBtn:rgb(80, 80, 80);
 }
