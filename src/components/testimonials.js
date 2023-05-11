@@ -11,8 +11,8 @@ function Testimonials(props) {
         <h1 style={{ color: theme.mode.h1 }}>testimonials</h1>
         <div className={styles.tagline}>
           <i>
-            𝒲𝒽𝒾𝓁𝑒 𝑜𝓊𝓇 𝓉𝑒𝒶𝓂 𝒾𝓈 𝓉𝒽𝑒 𝒷𝓇𝒶𝒾𝓃𝓈, 𝑜𝓊𝓇 𝓅𝓇𝑜𝓁𝒾𝒻𝒾𝒸 𝒸𝓁𝒾𝑒𝓃𝓉𝑒𝓁𝑒 𝒾𝓈 𝓉𝒽𝑒 𝒽𝑒𝒶𝓇𝓉𝓈
-            𝒹𝒾𝓇𝑒𝒸𝓉𝒾𝓃𝑔 𝒞𝑜𝒹𝑒𝒱𝓊𝑒.
+            While our team is the Brains, our prolific clientele is the hearts
+            directing CodeVue.
           </i>
         </div>
         <p>

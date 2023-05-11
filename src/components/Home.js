@@ -82,7 +82,7 @@ function Home(props) {
                 </div>
               )}
             </div>
-            <Link to={"/allpages"}>
+            <Link to={"/allpages"} className={styles.explore}>
               <FaPuzzlePiece /> explore
             </Link>
           </div>
@@ -128,7 +128,7 @@ function Home(props) {
       </div>
       <div className={styles.footer}>
         <div className={styles.policy}>
-          <Link to={"/policy"}>Privacy Policy</Link> ||{" "}
+          <Link to={"/policy"}>Privacy Policy</Link> |{" "}
           <Link to={"/terms"}>T&C</Link>
         </div>
         <div className={styles.copyright}>Copyright @2023-24</div>

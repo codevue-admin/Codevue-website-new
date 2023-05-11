@@ -10,6 +10,7 @@
     animation: anim 2s ease-in-out;
     display: flex;
     gap: 5px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @keyframes anim {

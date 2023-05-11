@@ -1,11 +1,23 @@
 @import "color.css";
 
+
+.h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+.tagline{
+    font-size: .9rem;
+    font-family: 'Raleway', sans-serif;
+}
+
 .contactform{
     width: 75%;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .formdiv{

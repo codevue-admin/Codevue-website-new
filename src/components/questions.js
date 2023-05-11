@@ -65,8 +65,10 @@ function Question() {
   };
   return (
     <div className={styles.questions}>
-      <h1>contact</h1>
-      <p>𝐿𝑒𝓉'𝓈 𝓇𝒶𝒾𝓈𝑒 𝒶 𝓋𝒾𝓇𝓉𝓊𝒶𝓁 𝓉𝑜𝒶𝓈𝓉 𝓉𝑜 𝓎𝑜𝓊𝓇 𝒹𝒾𝑔𝒾𝓉𝒶𝓁 𝓈𝓊𝒸𝒸𝑒𝓈𝓈.!</p>
+      <h1 className={styles.h1}>contact</h1>
+      <div className={styles.tagline}>
+        <p>Let's raise a virtual toast to your digital success.!</p>
+      </div>
       <p>
         We've had the privilege of helping many of our clients navigate the vast
         landscape of the digital world. We'd like to extend an invitation to you

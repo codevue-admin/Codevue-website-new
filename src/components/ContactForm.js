@@ -30,8 +30,10 @@ function ContactForm() {
   };
   return (
     <div className={styles.contactform}>
-      <h1>contact</h1>
-      <p>𝐿𝑒𝓉'𝓈 𝓇𝒶𝒾𝓈𝑒 𝒶 𝓋𝒾𝓇𝓉𝓊𝒶𝓁 𝓉𝑜𝒶𝓈𝓉 𝓉𝑜 𝓎𝑜𝓊𝓇 𝒹𝒾𝑔𝒾𝓉𝒶𝓁 𝓈𝓊𝒸𝒸𝑒𝓈𝓈.!</p>
+      <h1 className={styles.h1}>contact</h1>
+      <div className={styles.tagline}>
+        <p>Let's raise a virtual toast to ypur digital success.!</p>
+      </div>
       <div className={styles.formdiv}>
         <p>We would love to hear from you</p>
         <div className={styles.form}>

@@ -3,12 +3,12 @@
 
 .main{
     width: 75%;
-    /* background-color: yellowgreen; */
     height: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .content{
@@ -21,8 +21,12 @@
 }
 
 .main h1{
-    color: var(--headingColor);
     font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+.tagline{
+    font-size: .9rem;
+    font-family: 'Raleway', sans-serif;
 }
 .userimg2{
     display: none;

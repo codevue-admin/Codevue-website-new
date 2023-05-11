@@ -114,7 +114,7 @@ function CaseStudy() {
         Case Study
       </h1>
       <div className={styles.tagline}>
-        <i>𝒲𝑒 𝓀𝓃𝑜𝓌 𝒮𝑜𝒻𝓉𝓌𝒶𝓇𝑒 𝒶𝓃𝒹 𝒶𝓅𝓅𝓈; 𝓀𝓃𝑜𝓌 𝓌𝒽𝓎, 𝒷𝑒𝒸𝒶𝓊𝓈𝑒 𝓌𝑒 𝓌𝓇𝒾𝓉𝑒 𝓉𝒽𝑒𝓂.</i>
+        <i>we know software and apps; know why, because we write them.</i>
       </div>
       <p>
         Our approach is to first understand the user's needs, goals, and

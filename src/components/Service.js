@@ -25,8 +25,8 @@ function Service(props) {
           <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
             Service
           </h1>
-          <div>
-            <i>𝐼𝓂𝒶𝑔𝒾𝓃𝑒. 𝒟𝑒𝓈𝒾𝑔𝓃. 𝐵𝓊𝒾𝓁𝒹. 𝐿𝒶𝓊𝓃𝒸𝒽.</i>
+          <div className={styles.tagline}>
+            <i>Imagine. Design. Build. Launch.</i>
           </div>
           <p>
             The market is rapidly changing and businesses are struggling to keep
@@ -46,8 +46,8 @@ function Service(props) {
           <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
             Imagine
           </h1>
-          <div>
-            <i>𝒯𝒽𝑒 𝒻𝓁𝒾𝑔𝒽𝓉 𝑜𝒻 𝓉𝓇𝒶𝓃𝓈𝒻𝑜𝓇𝓂𝒶𝓉𝒾𝑜𝓃 𝒶𝓃𝒹 𝓈𝓊𝒸𝒸𝑒𝓈𝓈 𝓉𝒶𝓀𝑒 𝑜𝒻𝒻.!</i>
+          <div className={styles.tagline}>
+            <i>The flight of transformation and success take off.!</i>
           </div>
           <p>
             Join us in the journey with our tech experts in an immersive session
@@ -80,8 +80,8 @@ function Service(props) {
           <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
             Design
           </h1>
-          <div>
-            <i>𝒢𝑒𝓉 𝓇𝑒𝒶𝒹𝓎 𝓉𝑜 𝑒𝓍𝓅𝑒𝓇𝒾𝑒𝓃𝒸𝑒 𝑒𝓍𝒸𝑒𝓁𝓁𝑒𝓃𝒸𝑒.!</i>
+          <div className={styles.tagline}>
+            <i>Get ready to experience excellence.!</i>
           </div>
           <p>
             Want to create a seamless user experience and make a lasting
@@ -117,8 +117,8 @@ function Service(props) {
           <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
             Develop
           </h1>
-          <div>
-            <i>𝒯𝒽𝒾𝓈 𝒾𝓈 𝓌𝑒𝓇𝑒 𝓉𝒽𝑒 𝓂𝒶𝑔𝒾𝒸 𝒶𝓃𝒹 𝒻𝓊𝓃 𝒽𝒶𝓅𝓅𝑒𝓃𝓈.!</i>
+          <div className={styles.tagline}>
+            <i>This is were the magic and fun happens.!</i>
           </div>
           <p>
             We understand that your website and app are a reflection of your

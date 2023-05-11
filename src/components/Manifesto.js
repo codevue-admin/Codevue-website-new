@@ -45,11 +45,13 @@ function Manifesto() {
   };
   return (
     <div className={styles.maindiv}>
-      <h1 style={{ color: theme.mode.h1 }}>manifesto</h1>
+      <h1 style={{ color: theme.mode.h1 }} className={styles.h1}>
+        manifesto
+      </h1>
       <div className={styles.tagline}>
         <i>
-          𝑀𝑜𝓇𝒶𝓁 𝓋𝒶𝓁𝓊𝑒𝓈 𝒻𝓇𝑜𝓂 𝑜𝓊𝓇 𝒸𝒽𝒾𝓁𝒹𝒽𝑜𝑜𝒹 𝓇𝑒𝒸𝑜𝓃𝒸𝑒𝓅𝓉𝓊𝒶𝓁𝒾𝓏𝑒𝒹 𝒶𝓈 𝓉𝒽𝑒 𝓂𝒶𝓃𝒾𝒻𝑒𝓈𝓉𝑜 𝑜𝒻
-          𝒞𝑜𝒹𝑒𝒱𝓊𝑒..
+          Moral values from our childhood reconceptualized as the manifesto of
+          CodeVue.
         </i>
       </div>
       <div className={styles.section}>
