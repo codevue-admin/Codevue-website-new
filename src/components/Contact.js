@@ -1,6 +1,7 @@
 import styles from "../styles/contact.module.css";
 import { Link } from "react-router-dom";
 import { useTheme } from "../hooks/theme";
+import Footer from "./Footer";
 
 function Contact(props) {
   let theme = useTheme();

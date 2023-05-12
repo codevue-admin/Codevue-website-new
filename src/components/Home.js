@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import color from "../color";
 import { useTheme } from "../hooks/theme";
+import Footer from "./Footer";
 
 function Home(props) {
   let theme = useTheme();
@@ -91,7 +92,7 @@ function Home(props) {
           <div className={styles.text}>
             <div className={styles.caption}>
               <h1>Our code, your vue</h1>
-              <Link to={"/allpages"}>
+              <Link to={"/contact"}>
                 <button>let's collaborate</button>
               </Link>
             </div>
@@ -126,24 +127,7 @@ function Home(props) {
       <div id="companyRelateddiv" className={styles.imgdiv}>
         <img id="companyRelatedImg" alt="no-img" />
       </div>
-      <div className={styles.footer}>
-        <div className={styles.policy}>
-          <Link to={"/policy"}>Privacy Policy</Link> |{" "}
-          <Link to={"/terms"}>T&C</Link>
-        </div>
-        <div className={styles.copyright}>Copyright @2023-24</div>
-        <div className={styles.socialicons}>
-          <Link to={"#"}>
-            <FaInstagram />
-          </Link>
-          <Link to={"#"}>
-            <FaLinkedinIn />
-          </Link>
-          <Link to={"#"}>
-            <FaTwitter />
-          </Link>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

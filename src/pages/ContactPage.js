@@ -1,9 +1,10 @@
 import styles from "../styles/contactpage.module.css";
-import { ContactForm, Contact, Question } from "../components";
+import { ContactForm, Contact, Question, Footer } from "../components";
 import { useState } from "react";
 function ContactPage(props) {
   const [obj, setobj] = useState("home");
   const handleClick = (e) => {
+    e.preventDefault();
     console.log(e.target);
     let temp = e.target.getAttribute("data-val");
     console.log(temp);
@@ -20,6 +21,7 @@ function ContactPage(props) {
       {obj === "home" && <Contact handleclick={handleClick} />}
       {obj === "ques" && <Question handleclick={handleClick} />}
       {obj === "form" && <ContactForm handleclick={handleClick} />}
+      <Footer />
     </div>
   );
 }

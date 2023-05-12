@@ -15,6 +15,7 @@ import CaseStudy from "./Casestudy";
 import Service from "./Service";
 import Policy from "./PrivacyPolicy";
 import TermsAndConditions from "./TermsAndConditions";
+import Footer from "./Footer";
 export {
   Home,
   About,
@@ -35,4 +36,5 @@ export {
   Service,
   Policy,
   TermsAndConditions,
+  Footer,
 };

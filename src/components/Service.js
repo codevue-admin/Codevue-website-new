@@ -37,7 +37,32 @@ function Service(props) {
             services to make the world digital.
           </p>
           <h2 className={styles.links} ref={links}>
-            <Link>Imagine</Link> , <Link>Design</Link>, <Link>Develop</Link>
+            <Link
+              className={styles.sublink}
+              data-val="3"
+              data-srv="71"
+              onClick={props.handleclick}
+            >
+              Imagine
+            </Link>
+            ,
+            <Link
+              className={styles.sublink}
+              data-val="3"
+              data-srv="72"
+              onClick={props.handleclick}
+            >
+              Design
+            </Link>
+            ,
+            <Link
+              className={styles.sublink}
+              data-val="3"
+              data-srv="73"
+              onClick={props.handleclick}
+            >
+              Develop
+            </Link>
           </h2>
         </div>
       )}

@@ -51,13 +51,9 @@ function AboutPage(props) {
   };
 
   return (
-    <motion.div
-      style={theme.mode}
-      className={styles.aboutpage}
-      ref={props.childref}
-    >
+    <div style={theme.mode} className={styles.aboutpage} ref={props.childref}>
       <About height={height} width={width} />
-    </motion.div>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Navbar, Aside, Nextpage } from "../components";
+import { Navbar, Aside, Nextpage, Footer } from "../components";
 import AboutPage from "./AboutPage";
 import TeamPage from "./TeamPage";
 import TestimonialPage from "./Testimonialpage.js";
@@ -10,9 +10,9 @@ import { useEffect, useRef, useState, useMemo } from "react";
 
 let scrollIntoView = require("scroll-into-view");
 
-function Allpages() {
+function Allpages(props) {
   const [child, setChild] = useState("1");
-  const [service, setservice] = useState(70);
+  const [service, setservice] = useState(null);
   const [servicetab, settab] = useState("service");
   const ref = useRef(null);
   const aboutRef = useRef(null);
@@ -33,24 +33,25 @@ function Allpages() {
   };
   let pos = 0;
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handlescroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handlescroll);
-  //   };
-  // }, []);
+  useEffect(() => {
+    console.log(props.pos);
+    if (props.pos) {
+      let pos = props.pos;
+      scrollIntoView(allref[pos].current, function () {
+        setChild(pos);
+      });
+    }
+  }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e, num) => {
     e.preventDefault();
     // window.removeEventListener("scroll", handlescroll);
     console.log("clicked!");
     let r = e.target.getAttribute("data-val");
+    let s = e.target.getAttribute("data-srv");
+    setservice(s);
     console.log(r);
     if (r == 3) {
-      let s = e.target.getAttribute("data-srv");
-      if (s != null) {
-        setservice(s);
-      }
       if (s == "70") {
         settab("service");
       } else if (s == "71") {
@@ -118,7 +119,11 @@ function Allpages() {
       <Nextpage child={child} />
       <AboutPage childref={aboutRef} />
       <ManifestoPage childref={manifestoRef} />
-      <ServicePage childref={serviceRef} servicetab={servicetab} />
+      <ServicePage
+        childref={serviceRef}
+        servicetab={servicetab}
+        handleclick={handleClick}
+      />
       <CaseStudyPage childref={caseStudyRef} />
       <TestimonialPage childref={testimonialRef} />
       <TeamPage childref={teamRef} />

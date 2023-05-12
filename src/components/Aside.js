@@ -6,7 +6,7 @@ function Aside(props) {
     fontWeight: 700,
     letterSpacing: ".5px",
   };
-  if (props.child == 3) {
+  if (props.srv == "71" || props.srv == "72" || props.srv == "73") {
     return (
       <div className={styles.aside}>
         <ul className={styles.ul}>
@@ -21,28 +21,28 @@ function Aside(props) {
             </Link>
           </li>
           <li className={styles.item5}>
-            <Link to={"/team"} data-val="4" onClick={props.handleclick}>
+            <Link to={"/team"} data-val="2" onClick={props.handleclick}>
               m
             </Link>
           </li>
           <li className={styles.item6}>
-            <Link data-val="5" onClick={props.handleclick}>
+            <Link data-val="4" onClick={props.handleclick}>
               c
             </Link>
           </li>
           <li className={styles.item4}>
-            <Link to={"/about"} data-val="3" onClick={props.handleclick}>
+            <Link to={"/about"} data-val="5" onClick={props.handleclick}>
               t
             </Link>
           </li>
           <li className={styles.item3}>
-            <Link to={"/team"} data-val="2" onClick={props.handleclick}>
+            <Link to={"/team"} data-val="6" onClick={props.handleclick}>
               o
             </Link>
           </li>
           <li className={styles.item7}>
-            <Link data-val="6" onClick={props.handleclick}>
-              s
+            <Link data-val="7" onClick={props.handleclick}>
+              c
             </Link>
           </li>
         </ul>
@@ -107,7 +107,11 @@ function Aside(props) {
       <div className={styles.aside}>
         <ul className={styles.ul}>
           <Link to={props.backUrl}>
-            <li className={styles.item1}>
+            <li
+              className={styles.item1}
+              data-val="-1"
+              onClick={props.handleclick}
+            >
               <FaRegArrowAltCircleLeft />
             </li>
           </Link>
@@ -149,7 +153,7 @@ function Aside(props) {
                 services
               </Link>
             ) : (
-              <Link data-val="3" onClick={props.handleclick}>
+              <Link data-val="3" data-srv="70" onClick={props.handleclick}>
                 services
               </Link>
             )}

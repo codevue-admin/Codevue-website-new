@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/contactform.module.css";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaRegArrowAltCircleRight, FaArrowLeft } from "react-icons/fa";
 import { useTheme } from "../hooks/theme";
+import { Link } from "react-router-dom";
 
-function ContactForm() {
+function ContactForm(props) {
   let theme = useTheme();
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
@@ -34,6 +35,9 @@ function ContactForm() {
       <div className={styles.tagline}>
         <p>Let's raise a virtual toast to ypur digital success.!</p>
       </div>
+      <Link data-val="home" onClick={props.handleclick}>
+        <FaArrowLeft /> Back
+      </Link>
       <div className={styles.formdiv}>
         <p>We would love to hear from you</p>
         <div className={styles.form}>

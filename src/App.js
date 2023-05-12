@@ -5,6 +5,7 @@ import {
   Allpages,
   PolicyPage,
   TermsAndConditionsPage,
+  ContactPage,
 } from "./pages";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/policy" element={<PolicyPage />} />
           <Route path="/terms" element={<TermsAndConditionsPage />} />
           <Route path="/allpages" element={<Allpages />} />
+          <Route path="/contact" element={<Allpages pos={7} />} />
         </Routes>
       </AnimatePresence>
     </div>
