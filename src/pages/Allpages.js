@@ -7,13 +7,15 @@ import ContactPage from "./ContactPage";
 import CaseStudyPage from "./caseStudyPage";
 import ServicePage from "./ServicePage";
 import { useEffect, useRef, useState, useMemo } from "react";
-
+import { useNavigate } from "react-router-dom";
 let scrollIntoView = require("scroll-into-view");
 
 function Allpages(props) {
+  const redirect = useNavigate();
   const [child, setChild] = useState("1");
   const [service, setservice] = useState(null);
   const [servicetab, settab] = useState("service");
+  const back = useRef("0");
   const ref = useRef(null);
   const aboutRef = useRef(null);
   const teamRef = useRef(null);
@@ -45,7 +47,6 @@ function Allpages(props) {
 
   const handleClick = (e, num) => {
     e.preventDefault();
-    // window.removeEventListener("scroll", handlescroll);
     console.log("clicked!");
     let r = e.target.getAttribute("data-val");
     let s = e.target.getAttribute("data-srv");
@@ -62,13 +63,33 @@ function Allpages(props) {
         settab("develop");
       }
     }
-    console.log(allref[r].current);
-    scrollIntoView(allref[r].current, function () {
-      pos = window.scrollY;
-      console.log("pos:", pos);
-      setChild(r);
-      // window.addEventListener("scroll", handlescroll);
-    });
+    if (r == null) {
+      const key = back.current[back.current.length - 1];
+      console.log(key);
+      if (key != 0) {
+        if (key == 3) {
+          settab("service");
+        }
+        scrollIntoView(allref[key].current, function () {
+          pos = window.scrollY;
+          back.current = back.current.slice(0, back.current.length - 1);
+          if (key != 0) {
+            setChild(key);
+          }
+        });
+      } else {
+        console.log("else");
+        return redirect("/");
+      }
+    } else {
+      scrollIntoView(allref[r].current, function () {
+        pos = window.scrollY;
+        if (back.current[back.current.length - 1] != child) {
+          back.current = back.current + child;
+        }
+        setChild(r);
+      });
+    }
   };
 
   const handlescroll = (e) => {

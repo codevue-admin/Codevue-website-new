@@ -44,6 +44,11 @@
     display: none;
 }
 
+.btngrp{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .btn{
     margin-top: 25px;
     outline: none;

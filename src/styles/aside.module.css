@@ -32,6 +32,11 @@
 .ul li:hover{
     font-size: .95rem;
 }
+
+li.item1:hover{
+    font-size: 1.1rem;
+}
+
 .ul li{
     width: fit-content;
     height: 30px;
@@ -45,9 +50,21 @@
     height: 60%;
     justify-content: center;
 }
+.ul7 li:hover{
+    font-size: .95rem;
+}
+.ul7 li{
+    width: fit-content;
+    height: 30px;
+}
 .item1{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+#serviceback{
+    width: 25px;
+    height: 25px;
 }
 
 @media screen and (max-width:900px){

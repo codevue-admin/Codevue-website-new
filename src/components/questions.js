@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/questions.module.css";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaRegArrowAltCircleRight, FaArrowLeft } from "react-icons/fa";
 import SelectTeam from "./SelectTeam";
 import { useTheme } from "../hooks/theme";
 
@@ -10,7 +10,7 @@ const questions = [
   "Q. We have a diverse team with a wide range of skills and knowledge. what would you like to choose?",
 ];
 
-function Question() {
+function Question(props) {
   let theme = useTheme();
   let [name, setname] = useState("");
   let [phone, setphone] = useState("");
@@ -147,15 +147,24 @@ function Question() {
             onChange={(e) => setname(e.target.value)}
           />
         )}
-
-        <button
-          style={{ color: theme.mode.color }}
-          className={styles.btn}
-          disabled={btn}
-          onClick={handleNext}
-        >
-          Next <FaRegArrowAltCircleRight />
-        </button>
+        <div className={styles.btngrp}>
+          <button
+            style={{ color: theme.mode.color }}
+            className={styles.btn}
+            data-val="home"
+            onClick={props.handleclick}
+          >
+            <FaArrowLeft /> Back
+          </button>
+          <button
+            style={{ color: theme.mode.color }}
+            className={styles.btn}
+            disabled={btn}
+            onClick={handleNext}
+          >
+            Next <FaRegArrowAltCircleRight />
+          </button>
+        </div>
       </div>
     </div>
   );

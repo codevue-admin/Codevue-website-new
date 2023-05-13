@@ -11,7 +11,12 @@ function Aside(props) {
       <div className={styles.aside}>
         <ul className={styles.ul}>
           <Link to={props.backUrl}>
-            <li className={styles.item1}>
+            <li
+              id={styles.serviceback}
+              className={styles.item1}
+              data-val="-1"
+              onClick={props.handleclick}
+            >
               <FaRegArrowAltCircleLeft />
             </li>
           </Link>
