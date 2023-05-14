@@ -16,6 +16,7 @@ import Service from "./Service";
 import Policy from "./PrivacyPolicy";
 import TermsAndConditions from "./TermsAndConditions";
 import Footer from "./Footer";
+import Loading from "./Loading";
 export {
   Home,
   About,
@@ -37,4 +38,5 @@ export {
   Policy,
   TermsAndConditions,
   Footer,
+  Loading,
 };

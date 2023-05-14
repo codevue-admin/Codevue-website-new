@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/policy" element={<PolicyPage />} />
           <Route path="/terms" element={<TermsAndConditionsPage />} />
-          <Route path="/allpages" element={<Allpages />} />
+          <Route path="/explore" element={<Allpages />} />
           <Route path="/contact" element={<Allpages pos={7} />} />
         </Routes>
       </AnimatePresence>

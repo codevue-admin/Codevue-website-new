@@ -7,7 +7,7 @@
 }
 
 .section1  {
-    font-size: .8rem;
+    font-size: .9rem;
     top: 120px;
     position: fixed;
     height: 90vh;
@@ -45,7 +45,7 @@
     margin-top: 100px;
     width: 88%;
     padding-left: 26%;
-    font-size: .8rem;
+    font-size: .9rem;
     display: flex;
     flex-direction: column;
     gap: 10px;

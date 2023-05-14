@@ -1,4 +1,5 @@
-import { Navbar, Aside, Nextpage, Footer } from "../components";
+import { Navbar, Aside, Nextpage, Footer, Loading } from "../components";
+import styles from "../styles/allpage.module.css";
 import AboutPage from "./AboutPage";
 import TeamPage from "./TeamPage";
 import TestimonialPage from "./Testimonialpage.js";
@@ -8,13 +9,16 @@ import CaseStudyPage from "./caseStudyPage";
 import ServicePage from "./ServicePage";
 import { useEffect, useRef, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../hooks/theme";
 let scrollIntoView = require("scroll-into-view");
 
 function Allpages(props) {
   const redirect = useNavigate();
+  const theme = useTheme();
   const [child, setChild] = useState("1");
   const [service, setservice] = useState(null);
   const [servicetab, settab] = useState("service");
+  const [load, setload] = useState(true);
   const back = useRef("0");
   const ref = useRef(null);
   const aboutRef = useRef(null);
@@ -92,64 +96,35 @@ function Allpages(props) {
     }
   };
 
-  const handlescroll = (e) => {
-    let newPos = window.scrollY;
-    let dir = null;
-    if (pos - newPos < 0) {
-      dir = "down";
-    } else if (pos - newPos > 0) {
-      dir = "up";
-    }
-    if (dir == "up") {
-      if (pos == 0) {
-        scrollIntoView(aboutRef.current, function () {
-          pos = window.scrollY;
-        });
-      } else if (pos == window.innerHeight) {
-        scrollIntoView(aboutRef.current, function () {
-          pos = window.scrollY;
-          console.log("pos:", pos);
-          setChild(1);
-        });
-      }
-    } else if (dir == "down") {
-      if (pos == 0) {
-        let num = parseInt(child) + 1;
-        let st = num.toString();
-        scrollIntoView(allref[st].current, function () {
-          pos = window.scrollY;
-          console.log("pos:", pos);
-          setChild(2);
-        });
-      } else if (pos == window.innerHeight) {
-        scrollIntoView(teamRef.current, function () {
-          pos = window.scrollY;
-        });
-      }
-    }
-  };
+  function loadfn() {
+    setload(false);
+  }
+
   return (
-    <div ref={ref}>
-      <Navbar />
-      <Aside
-        child={child}
-        myref={teamRef}
-        srv={service}
-        handleclick={handleClick}
-      />
-      <Nextpage child={child} />
-      <AboutPage childref={aboutRef} />
-      <ManifestoPage childref={manifestoRef} />
-      <ServicePage
-        childref={serviceRef}
-        servicetab={servicetab}
-        handleclick={handleClick}
-      />
-      <CaseStudyPage childref={caseStudyRef} />
-      <TestimonialPage childref={testimonialRef} />
-      <TeamPage childref={teamRef} />
-      <ContactPage childref={contactRef} />
-    </div>
+    <>
+      {load && <Loading loadfn={loadfn} />}
+      <div ref={ref} className={styles.maincontent}>
+        <Navbar />
+        <Aside
+          child={child}
+          myref={teamRef}
+          srv={service}
+          handleclick={handleClick}
+        />
+        <Nextpage child={child} />
+        <AboutPage childref={aboutRef} />
+        <ManifestoPage childref={manifestoRef} />
+        <ServicePage
+          childref={serviceRef}
+          servicetab={servicetab}
+          handleclick={handleClick}
+        />
+        <CaseStudyPage childref={caseStudyRef} />
+        <TestimonialPage childref={testimonialRef} />
+        <TeamPage childref={teamRef} />
+        <ContactPage childref={contactRef} />
+      </div>
+    </>
   );
 }
 

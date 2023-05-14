@@ -83,7 +83,7 @@ function Home(props) {
                 </div>
               )}
             </div>
-            <Link to={"/allpages"} className={styles.explore}>
+            <Link to={"/explore"} className={styles.explore}>
               <FaPuzzlePiece /> explore
             </Link>
           </div>
