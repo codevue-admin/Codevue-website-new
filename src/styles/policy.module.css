@@ -3,15 +3,16 @@
 
 .policy{
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .section1  {
-   font-size: .8rem;
-   top: 5vh;
-   position: fixed;
-   height: 90vh;
-   width: 25%;
-   padding-left: 10px;
+    font-size: .8rem;
+    top: 120px;
+    position: fixed;
+    height: 90vh;
+    width: 25%;
+    padding-left: 10px;
 }
 
 .section1 ul{
@@ -27,9 +28,22 @@
     cursor: pointer;
 }
 
+.h1{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.tagline{
+    font-size: .9rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .section2{
-    margin-top: 50px;
-    width: 100%;
+    margin-top: 100px;
+    width: 88%;
     padding-left: 26%;
     font-size: .8rem;
     display: flex;
@@ -37,8 +51,32 @@
     gap: 10px;
 }
 
+.section2 h3{
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.section2 h3 svg{
+    font-size: 1.5rem;
+}
+
 .section2 ul{
     list-style-position: inside;
+}
+
+.dis{
+    display: none;
+}
+.toggdiv{
+    overflow: hidden;
+    height: 0;
+}
+
+
+.foot{
+    position: relative;
+    margin-top: 80px;
 }
 
 @media screen and (max-width:600px) {

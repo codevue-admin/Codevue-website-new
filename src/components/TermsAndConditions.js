@@ -1,7 +1,6 @@
 import styles from "../styles/termsandcoditions.module.css";
 import { useRef } from "react";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
-import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Navbar, Footer } from "../components";
 
 let scrollIntoView = require("scroll-into-view");
