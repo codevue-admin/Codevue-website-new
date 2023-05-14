@@ -52,7 +52,7 @@
 }
 
 .section2 h3{
-    background-color: grey;
+    background-color: lightgray;
     display: flex;
     justify-content: space-between;
     cursor: pointer;

@@ -2,10 +2,12 @@ import styles from "../styles/termsandcoditions.module.css";
 import { useRef } from "react";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 import { Navbar, Footer } from "../components";
+import { useTheme } from "../hooks/theme";
 
 let scrollIntoView = require("scroll-into-view");
 
 function TermsAndConditions() {
+  const theme = useTheme();
   let ref1 = useRef(null);
   let ref2 = useRef(null);
   let ref3 = useRef(null);
@@ -114,7 +116,12 @@ function TermsAndConditions() {
           located at CodeVue. Agency and all pages and parts thereof ("the
           Site").
         </p>
-        <h3 ref={ref1} onClick={handleToggle} data-val="tc1">
+        <h3
+          ref={ref1}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc1"
+        >
           <div>1. Definitions</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -140,7 +147,12 @@ function TermsAndConditions() {
           </p>
           <p>1.6 "Website" means a site on the World Wide Web.</p>
         </div>
-        <h3 ref={ref2} onClick={handleToggle} data-val="tc2">
+        <h3
+          ref={ref2}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc2"
+        >
           <div>2.Acceptable use</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -181,7 +193,12 @@ function TermsAndConditions() {
             purpose.
           </p>
         </div>
-        <h3 ref={ref3} onClick={handleToggle} data-val="tc3">
+        <h3
+          ref={ref3}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc3"
+        >
           <div>3. Third-Party Websites</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -211,7 +228,12 @@ function TermsAndConditions() {
             of any such dealings.
           </p>
         </div>
-        <h3 ref={ref4} onClick={handleToggle} data-val="tc4">
+        <h3
+          ref={ref4}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc4"
+        >
           <div>4. Intellectual Property</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -256,7 +278,12 @@ function TermsAndConditions() {
             engineering, disassembling, or creating derivative works of it.
           </p>
         </div>
-        <h3 ref={ref5} onClick={handleToggle} data-val="tc5">
+        <h3
+          ref={ref5}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc5"
+        >
           <div>5. Our Rights</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -321,7 +348,12 @@ function TermsAndConditions() {
             of us, our servants, agents, or employees.
           </p>
         </div>
-        <h3 ref={ref6} onClick={handleToggle} data-val="tc6">
+        <h3
+          ref={ref6}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc6"
+        >
           <div>6. Privacy</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -357,7 +389,12 @@ function TermsAndConditions() {
             provide us with through the Site.
           </p>
         </div>
-        <h3 ref={ref7} onClick={handleToggle} data-val="tc7">
+        <h3
+          ref={ref7}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc7"
+        >
           <div>7. Safety</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -387,7 +424,12 @@ function TermsAndConditions() {
             feedback section of the Site.
           </p>
         </div>
-        <h3 ref={ref8} onClick={handleToggle} data-val="tc8">
+        <h3
+          ref={ref8}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc8"
+        >
           <div>8. Indemnity</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -406,7 +448,12 @@ function TermsAndConditions() {
             of the Site.
           </p>
         </div>
-        <h3 ref={ref9} onClick={handleToggle} data-val="tc9">
+        <h3
+          ref={ref9}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc9"
+        >
           <div>9. Termination</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -423,7 +470,12 @@ function TermsAndConditions() {
             which we determine in our sole discretion to be unacceptable.
           </p>
         </div>
-        <h3 ref={ref10} onClick={handleToggle} data-val="tc10">
+        <h3
+          ref={ref10}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc10"
+        >
           <div>10. Feedback</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />
@@ -439,7 +491,12 @@ function TermsAndConditions() {
             contact us.
           </p>
         </div>
-        <h3 ref={ref11} onClick={handleToggle} data-val="tc11">
+        <h3
+          ref={ref11}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="tc11"
+        >
           <div>11. General</div>
           <div data-type="right">
             <FaAngleRight className={styles.right} />

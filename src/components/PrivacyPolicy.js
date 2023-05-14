@@ -2,9 +2,11 @@ import styles from "../styles/policy.module.css";
 import { useRef } from "react";
 import { Navbar, Footer } from "../components";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
+import { useTheme } from "../hooks/theme";
 
 let scrollIntoView = require("scroll-into-view");
 function Policy() {
+  const theme = useTheme();
   let ref1 = useRef(null);
   let ref2 = useRef(null);
   let ref3 = useRef(null);
@@ -113,7 +115,12 @@ function Policy() {
           Any changes we may make to our privacy policy in the future will be
           posted on this page and, where appropriate, notified to you by email.
         </p>
-        <h3 ref={ref1} onClick={handleToggle} data-val="pp1">
+        <h3
+          ref={ref1}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp1"
+        >
           <div>1.0 What information do we collect about you?</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -147,7 +154,12 @@ function Policy() {
             our normal procedures and legal requirements including GDPR.
           </p>
         </div>
-        <h3 ref={ref2} onClick={handleToggle} data-val="pp2">
+        <h3
+          ref={ref2}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp2"
+        >
           <div>2.0 How will we use your information?</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -199,7 +211,12 @@ function Policy() {
             Site.
           </p>
         </div>
-        <h3 ref={ref3} onClick={handleToggle} data-val="pp3">
+        <h3
+          ref={ref3}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp3"
+        >
           <div>3.0 Cookies</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -262,7 +279,12 @@ function Policy() {
             of such cookies.
           </p>
         </div>
-        <h3 ref={ref4} onClick={handleToggle} data-val="pp4">
+        <h3
+          ref={ref4}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp4"
+        >
           <div>4.0 Marketing</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -301,7 +323,12 @@ function Policy() {
             marketing purposes by contacting us or unsubscribing to emails.
           </p>
         </div>
-        <h3 ref={ref5} onClick={handleToggle} data-val="pp5">
+        <h3
+          ref={ref5}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp5"
+        >
           <div>5.0 Where do we hold your information?</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -325,7 +352,12 @@ function Policy() {
             customer.
           </p>
         </div>
-        <h3 ref={ref6} onClick={handleToggle} data-val="pp6">
+        <h3
+          ref={ref6}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp6"
+        >
           <div>6.0 With whom do we share your information?</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -370,7 +402,12 @@ function Policy() {
             services.
           </p>
         </div>
-        <h3 ref={ref7} onClick={handleToggle} data-val="pp7">
+        <h3
+          ref={ref7}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp7"
+        >
           <div>7.0 How do we keep your information secure?</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -399,7 +436,12 @@ function Policy() {
             procedures and security features to prevent unauthorized access.
           </p>
         </div>
-        <h3 ref={ref8} onClick={handleToggle} data-val="pp8">
+        <h3
+          ref={ref8}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp8"
+        >
           <div>8.0 Links to other sites</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -418,7 +460,12 @@ function Policy() {
             before you submit your information to those sites.
           </p>
         </div>
-        <h3 ref={ref9} onClick={handleToggle} data-val="pp9">
+        <h3
+          ref={ref9}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp9"
+        >
           <div>9.0 Your rights</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
@@ -451,7 +498,12 @@ function Policy() {
             Office.
           </p>
         </div>
-        <h3 ref={ref10} onClick={handleToggle} data-val="pp10">
+        <h3
+          ref={ref10}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp10"
+        >
           <div>10.0 Changes</div>
           <div data-type="right" className={styles.right}>
             <FaAngleRight />
