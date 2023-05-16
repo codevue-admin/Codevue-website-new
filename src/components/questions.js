@@ -77,7 +77,7 @@ function Question(props) {
       </p>
       <div className={styles.quescont}>
         {count == 0 && (
-          <h3 className={styles.ques} ref={headRef} onClick={handleClick}>
+          <h3 className={styles.ques} ref={headRef}>
             {questions[count]}
           </h3>
         )}
@@ -98,6 +98,7 @@ function Question(props) {
                   name="phone"
                   value={phone}
                   onChange={(e) => setphone(e.target.value)}
+                  autoFocus={true}
                 />
               </li>
               <li>
@@ -141,10 +142,10 @@ function Question(props) {
             style={{ color: theme.mode.color }}
             className={styles.quesinp}
             ref={inpRef}
-            placeholder={questions[count]}
             name="name"
             value={name}
             onChange={(e) => setname(e.target.value)}
+            autoFocus={true}
           />
         )}
         <div className={styles.btngrp}>

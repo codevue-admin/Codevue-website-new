@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "../styles/selectteam.module.css";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../hooks/theme";
+import { FaTimes } from "react-icons/fa";
 
 function SelectTeam(props) {
   const theme = useTheme();
@@ -62,15 +63,17 @@ function SelectTeam(props) {
   const handleAttach = (e) => {
     if (e.target.files[0]) {
       setAttach(e.target.files[0].name);
-      setcount(count + 1);
+      let cancel = document.querySelector(`.${styles.attach_cancel}`);
+      cancel.style.display = "block";
     }
   };
-  const handleNda = (e) => {
-    if (e.target.files[0]) {
-      setnda(e.target.files[0].name);
-      setcount(count + 1);
-    }
+  const handleCancel = (e) => {
+    setAttach("Add attachment");
+    setcount(count - 1);
+    let cancel = document.querySelector(`.${styles.attach_cancel}`);
+    cancel.style.display = "none";
   };
+  const handleNda = (e) => {};
   const handleService = (e) => {
     setservices(e.target.value);
     setcount(count + 1);
@@ -164,6 +167,7 @@ function SelectTeam(props) {
       ndaRef.current.click();
     }
   };
+
   return (
     <ul className={styles.ul2}>
       <li>
@@ -246,6 +250,9 @@ function SelectTeam(props) {
         />
       </li>
       <li>
+        <span className={styles.attach_cancel}>
+          <FaTimes onClick={handleCancel} />
+        </span>
         <span data-val="6" className={styles.span} onClick={handleClick}>
           {attach}
         </span>
@@ -257,15 +264,10 @@ function SelectTeam(props) {
         />
       </li>
       <li>
-        <span data-val="7" className={styles.span} onClick={handleClick}>
-          {nda}
-        </span>
-        <input
-          type="file"
-          className={styles.inp}
-          ref={ndaRef}
-          onChange={handleNda}
-        />
+        <input id="nda_id" type="checkbox" ref={ndaRef} onChange={handleNda} />
+        <label for="nda_id" data-val="7" className={styles.span}>
+          Send me NDA
+        </label>
       </li>
     </ul>
   );
