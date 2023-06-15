@@ -1,4 +1,4 @@
-import { Navbar, Aside, Nextpage, Footer, Loading } from "../components";
+import { Navbar, Aside, Nextpage, Footer } from "../components";
 import styles from "../styles/allpage.module.css";
 import AboutPage from "./AboutPage";
 import TeamPage from "./TeamPage";
@@ -18,7 +18,6 @@ function Allpages(props) {
   const [child, setChild] = useState("1");
   const [service, setservice] = useState(null);
   const [servicetab, settab] = useState("service");
-  const [load, setload] = useState(true);
   const back = useRef("0");
   const ref = useRef(null);
   const aboutRef = useRef(null);
@@ -96,13 +95,8 @@ function Allpages(props) {
     }
   };
 
-  function loadfn() {
-    setload(false);
-  }
-
   return (
     <>
-      {load && <Loading loadfn={loadfn} />}
       <div ref={ref} className={styles.maincontent}>
         <Navbar />
         <Aside

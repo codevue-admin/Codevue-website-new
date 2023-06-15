@@ -38,11 +38,13 @@ function Policy() {
     scrollIntoView(allref[rf].current);
   };
   const handleToggle = (e) => {
-    let id = e.target.getAttribute("data-val");
+    let h3 = e.target.closest("h3");
+    console.log(h3);
+    let id = h3.getAttribute("data-val");
     console.log(id);
     id = "#" + id;
     let ele = document.querySelector(id);
-    let icon = e.target.childNodes;
+    let icon = h3.childNodes;
     console.log(icon);
     console.log(ele);
     let hgt = ele.clientHeight;

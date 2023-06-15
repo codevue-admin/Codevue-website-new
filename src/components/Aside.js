@@ -2,6 +2,7 @@ import styles from "../styles/aside.module.css";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 function Aside(props) {
+  console.log(props.backUrl);
   let styl = {
     fontWeight: 700,
     letterSpacing: ".5px",
@@ -10,7 +11,7 @@ function Aside(props) {
     return (
       <div className={styles.aside}>
         <ul className={styles.ul}>
-          <Link to={props.backUrl}>
+          <Link to={"/explore"}>
             <li
               id={styles.serviceback}
               className={styles.item1}
@@ -111,12 +112,8 @@ function Aside(props) {
     return (
       <div className={styles.aside}>
         <ul className={styles.ul}>
-          <Link to={props.backUrl}>
-            <li
-              className={styles.item1}
-              data-val="-1"
-              onClick={props.handleclick}
-            >
+          <Link to={"/"}>
+            <li className={styles.item1} data-val="-1">
               <FaRegArrowAltCircleLeft />
             </li>
           </Link>

@@ -1,4 +1,4 @@
-import { Home } from "../components";
+import { Home, Loading } from "../components";
 import styles from "../styles/homepage.module.css";
 import { useEffect, useLayoutEffect, useState } from "react";
 import color from "../color";
@@ -6,6 +6,7 @@ import img from "../images/img2.jpg";
 import { useTheme } from "../hooks/theme";
 
 function HomePage() {
+  const [load, setload] = useState(true);
   let theme = useTheme();
   const handleHoverout = (e) => {
     e.preventDefault();
@@ -41,18 +42,23 @@ function HomePage() {
       imgdiv.style.opacity = "1";
     }
   };
-
+  function loadfn() {
+    setload(false);
+  }
   return (
-    <div
-      style={{
-        backgroundColor: theme.mode.backgroundColor,
-        color: theme.mode.color,
-      }}
-      className={styles.homepage}
-    >
-      <div></div>
-      <Home handleHoverout={handleHoverout} handleHover={handleHover} />
-    </div>
+    <>
+      {load && <Loading loadfn={loadfn} />}
+      <div
+        style={{
+          backgroundColor: theme.mode.backgroundColor,
+          color: theme.mode.color,
+        }}
+        className={styles.homepage}
+      >
+        <div></div>
+        <Home handleHoverout={handleHoverout} handleHover={handleHover} />
+      </div>
+    </>
   );
 }
 
