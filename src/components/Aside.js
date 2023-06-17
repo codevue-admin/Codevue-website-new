@@ -2,7 +2,6 @@ import styles from "../styles/aside.module.css";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 function Aside(props) {
-  console.log(props.backUrl);
   let styl = {
     fontWeight: 700,
     letterSpacing: ".5px",

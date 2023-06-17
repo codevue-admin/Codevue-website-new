@@ -39,6 +39,8 @@ function Allpages(props) {
   let pos = 0;
 
   useEffect(() => {
+    console.log("useEffect");
+    window.addEventListener("scroll", handleScroll);
     console.log(props.pos);
     if (props.pos) {
       let pos = props.pos;
@@ -46,10 +48,11 @@ function Allpages(props) {
         setChild(pos);
       });
     }
-  }, []);
+  }, [child]);
 
   const handleClick = (e, num) => {
     e.preventDefault();
+    window.removeEventListener("scroll", handleScroll);
     console.log("clicked!");
     let r = e.target.getAttribute("data-val");
     let s = e.target.getAttribute("data-srv");
@@ -58,12 +61,17 @@ function Allpages(props) {
     if (r == 3) {
       if (s == "70") {
         settab("service");
+        window.addEventListener("scroll", handleScroll);
       } else if (s == "71") {
         settab("imagine");
+        window.addEventListener("scroll", handleScroll);
       } else if (s == "72") {
+        window.addEventListener("scroll", handleScroll);
         settab("design");
+        window.addEventListener("scroll", handleScroll);
       } else {
         settab("develop");
+        window.addEventListener("scroll", handleScroll);
       }
     }
     if (r == null) {
@@ -95,10 +103,28 @@ function Allpages(props) {
     }
   };
 
+  const handleScroll = (e) => {
+    window.removeEventListener("scroll", handleScroll);
+    console.log(child);
+    let sec = allref[child].current.getBoundingClientRect().top;
+    console.log(sec);
+    if (sec < 0) {
+      scrollIntoView(allref[parseInt(child) + 1].current, function () {
+        let newnum = parseInt(child) + 1;
+        setChild(newnum.toString());
+      });
+    } else {
+      scrollIntoView(allref[parseInt(child) - 1].current, function () {
+        let newnum = parseInt(child) - 1;
+        setChild(newnum.toString());
+      });
+    }
+  };
+
   return (
     <>
       <div ref={ref} className={styles.maincontent}>
-        <Navbar />
+        <Navbar handleScroll={handleScroll} />
         <Aside
           child={child}
           myref={teamRef}
