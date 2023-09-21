@@ -41,7 +41,7 @@ function Home(props) {
           </div>
 
           <div className={styles.navlink}>
-            <div style={styl} className={styles.modes}>
+            {/* <div style={styl} className={styles.modes}>
               <div className={styles.modename}>
                 {theme.mode === color.darkTheme ? "NIGHTMODE" : "LIGHTMODE"}
               </div>
@@ -82,7 +82,7 @@ function Home(props) {
                   <FaRegSun />
                 </div>
               )}
-            </div>
+            </div> */}
             <Link to={"/explore"} className={styles.explore}>
               <FaPuzzlePiece /> explore
             </Link>

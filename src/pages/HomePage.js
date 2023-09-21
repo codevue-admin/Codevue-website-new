@@ -47,7 +47,7 @@ function HomePage() {
   }
   return (
     <>
-      {load && <Loading loadfn={loadfn} />}
+      {/* {load && <Loading loadfn={loadfn} />} */}
       <div
         style={{
           backgroundColor: theme.mode.backgroundColor,
