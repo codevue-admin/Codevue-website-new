@@ -1,7 +1,7 @@
 import styles from "../styles/policy.module.css";
 import { useRef } from "react";
 import { Navbar, Footer } from "../components";
-import { FaAngleRight, FaAngleDown } from "react-icons/fa";
+import {AiOutlinePlus,AiOutlineMinus} from 'react-icons/ai';
 import { useTheme } from "../hooks/theme";
 
 let scrollIntoView = require("scroll-into-view");
@@ -17,6 +17,7 @@ function Policy() {
   let ref8 = useRef(null);
   let ref9 = useRef(null);
   let ref10 = useRef(null);
+  let ref11 = useRef(null);
 
   const allref = {
     1: ref1,
@@ -29,6 +30,7 @@ function Policy() {
     8: ref8,
     9: ref9,
     10: ref10,
+    11: ref11,
   };
 
   const handleClick = (e) => {
@@ -60,75 +62,20 @@ function Policy() {
   };
   return (
     <div className={styles.policy}>
-      <Navbar />
-      <div className={styles.section1}>
-        <ul>
-          <li data-val="1" onClick={handleClick}>
-            1.What information do we collect about you?
-          </li>
-          <li data-val="2" onClick={handleClick}>
-            2.How will we use your information?
-          </li>
-          <li data-val="3" onClick={handleClick}>
-            3.cookies
-          </li>
-          <li data-val="4" onClick={handleClick}>
-            4.Marketing
-          </li>
-          <li data-val="5" onClick={handleClick}>
-            5.Where do we hold your information?
-          </li>
-          <li data-val="6" onClick={handleClick}>
-            6.With whom do we share your information?
-          </li>
-          <li data-val="7" onClick={handleClick}>
-            7.How do we keep your information secure?
-          </li>
-          <li data-val="8" onClick={handleClick}>
-            8.Links to other sites
-          </li>
-          <li data-val="9" onClick={handleClick}>
-            9.Your rights
-          </li>
-          <li data-val="10" onClick={handleClick}>
-            10.Changes
-          </li>
-        </ul>
-      </div>
       <div className={styles.section2}>
         <h1 className={styles.h1}>Privacy Policy</h1>
-        <p className={styles.tagline}>Do you think we stole something??</p>
-        <p>
-          CodeVue Pvt. Ltd. ('we') are committed to protecting and respecting
-          your privacy. This policy and any other documents we refer to in this
-          policy set out how we will use your personal information and with whom
-          it will be shared. Please read the following carefully.
-        </p>
-        <p>
-          Please note that by visiting and using the Site you are agreeing to
-          the use of your personal information in the way that is described in
-          this Privacy Policy.
-        </p>
-        <p>
-          If you have any queries or concerns regarding this Privacy Policy,
-          please contact us: hello@codevue.io.
-        </p>
-        <p>
-          Any changes we may make to our privacy policy in the future will be
-          posted on this page and, where appropriate, notified to you by email.
-        </p>
         <h3
           ref={ref1}
           style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
           onClick={handleToggle}
           data-val="pp1"
         >
-          <div>1.0 What information do we collect about you?</div>
+          <div>1. What information do we collect about you?</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp1">
@@ -162,12 +109,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp2"
         >
-          <div>2.0 How will we use your information?</div>
+          <div>2. How will we use your information?</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp2">
@@ -219,12 +166,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp3"
         >
-          <div>3.0 Cookies</div>
+          <div>3. Cookies</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp3">
@@ -287,12 +234,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp4"
         >
-          <div>4.0 Marketing</div>
+          <div>4. Marketing</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp4">
@@ -331,12 +278,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp5"
         >
-          <div>5.0 Where do we hold your information?</div>
+          <div>5. Where do we hold your information?</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp5">
@@ -360,16 +307,16 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp6"
         >
-          <div>6.0 With whom do we share your information?</div>
+          <div>6. With whom do we share your information?</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp6">
-          <p>6.0 With whom do we share your information?</p>
+          <p>6. With whom do we share your information?</p>
           <ul>
             <li>
               if we sell or buy any business or assets (as we may share your
@@ -410,12 +357,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp7"
         >
-          <div>7.0 How do we keep your information secure?</div>
+          <div>7. How do we keep your information secure?</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp7">
@@ -444,12 +391,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp8"
         >
-          <div>8.0 Links to other sites</div>
+          <div>8. Links to other sites</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp8">
@@ -468,12 +415,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp9"
         >
-          <div>9.0 Your rights</div>
+          <div>9. Your rights</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp9">
@@ -506,12 +453,12 @@ function Policy() {
           onClick={handleToggle}
           data-val="pp10"
         >
-          <div>10.0 Changes</div>
+          <div>10. Changes</div>
           <div data-type="right" className={styles.right}>
-            <FaAngleRight />
+            <AiOutlinePlus />
           </div>
           <div data-type="left" className={`${styles.left} ${styles.dis}`}>
-            <FaAngleDown />
+            <AiOutlineMinus />
           </div>
         </h3>
         <div className={styles.toggdiv} id="pp10">
@@ -524,6 +471,38 @@ function Policy() {
             the Site after that period expires means that you agree to be bound
             by the modified policy.
           </p>
+        </div>
+        <h3
+          ref={ref11}
+          style={{ backgroundColor: theme.mode.privacyHeadingBackground }}
+          onClick={handleToggle}
+          data-val="pp11"
+        >
+        <div>11. Do you think we stole something??</div>
+          <div data-type="right" className={styles.right}>
+            <AiOutlinePlus />
+          </div>
+          <div data-type="left" className={`${styles.left} ${styles.dis}`}>
+            <AiOutlineMinus />
+          </div>
+        </h3>
+        <div className={styles.toggdiv} id="pp11">
+        <p>
+          CodeVue Pvt. Ltd. ('we') are committed to protecting and respecting
+          your privacy. This policy and any other documents we refer to in this
+          policy set out how we will use your personal information and with whom
+          it will be shared. Please read the following carefully.
+        </p>
+        <p>
+          Please note that by visiting and using the Site you are agreeing to
+          the use of your personal information in the way that is described in
+          this Privacy Policy.If you have any queries or concerns regarding this Privacy Policy,
+          please contact us: hello@codevue.io.
+        </p>
+        <p>
+          Any changes we may make to our privacy policy in the future will be
+          posted on this page and, where appropriate, notified to you by email.
+        </p>
         </div>
       </div>
       <div className={styles.foot}>
