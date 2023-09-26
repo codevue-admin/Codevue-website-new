@@ -47,6 +47,7 @@
 }
 .navlink{
     display: flex;
+    align-items: baseline;
 }
 .explore{
     font-family: 'Raleway', sans-serif;

@@ -5,11 +5,8 @@ import { ReactComponent as Svg3 } from "../images/svg3.svg";
 import { ReactComponent as Svg4 } from "../images/svg4.svg";
 import {
   FaPuzzlePiece,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-  FaStarAndCrescent,
-  FaRegSun,
+  FaLightbulb,
+  FaRegLightbulb
 } from "react-icons/fa";
 import img from "../images/img2.jpg";
 import { Link } from "react-router-dom";
@@ -41,7 +38,7 @@ function Home(props) {
           </div>
 
           <div className={styles.navlink}>
-            {/* <div style={styl} className={styles.modes}>
+            <div style={styl} className={styles.modes}>
               <div className={styles.modename}>
                 {theme.mode === color.darkTheme ? "NIGHTMODE" : "LIGHTMODE"}
               </div>
@@ -52,7 +49,7 @@ function Home(props) {
                   className={styles.modecircle}
                   onClick={theme.handleMode}
                 >
-                  <FaStarAndCrescent />
+                  <FaRegLightbulb style={{color:'yellow'}} />
                 </div>
               ) : (
                 <div
@@ -60,7 +57,7 @@ function Home(props) {
                   className={styles.modecircle}
                   onClick={theme.handleMode}
                 >
-                  <FaRegSun />
+                  <FaRegLightbulb />
                 </div>
               )}
             </div>
@@ -71,7 +68,7 @@ function Home(props) {
                   className={styles.phonemodecircle}
                   onClick={theme.handleMode}
                 >
-                  <FaStarAndCrescent />
+                  <FaLightbulb />
                 </div>
               ) : (
                 <div
@@ -79,12 +76,12 @@ function Home(props) {
                   className={styles.phonemodecircle}
                   onClick={theme.handleMode}
                 >
-                  <FaRegSun />
+                  <FaRegLightbulb />
                 </div>
               )}
-            </div> */}
+            </div>
             <Link to={"/explore"} className={styles.explore}>
-              <FaPuzzlePiece /> explore
+                <FaPuzzlePiece /> explore
             </Link>
           </div>
         </div>
